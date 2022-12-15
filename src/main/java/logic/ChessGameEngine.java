@@ -179,7 +179,6 @@ public class ChessGameEngine {
             reset();
         } else {
             board.resetBoard(false);
-            // System.exit(0);
         }
     }
 
