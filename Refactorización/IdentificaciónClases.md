@@ -16,10 +16,20 @@ Es el panel principal, se definen las posiciones en la que estarán los elemento
 
 También se define la dimensión del panel 800x600
 
+# Clases Secundarias
+
+### Representan piezas del tablero
+
+- Rock.java
+- Queen.java
+- Pawn.java
+- Knight.java
+- King.java
+- Bishop.java
 
 # Cambios en el código
 
 ### ChessPanel.java
 
-- El método *getGraveyard* idendtifica al jugador, en la documentación se lee que *whichPlayer* tiene como valor 1 o 2. Se omite el else if, si witchPlayer no es 1, entonces es 2.
+- El método *getGraveyard* identifica al jugador, en la documentación se lee que *whichPlayer* tiene como valor 1 o 2. Se omite el else if, si witchPlayer no es 1, entonces es 2.
 
