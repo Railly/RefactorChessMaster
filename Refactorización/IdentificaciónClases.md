@@ -33,3 +33,6 @@ También se define la dimensión del panel 800x600
 
 - El método *getGraveyard* identifica al jugador, en la documentación se lee que *whichPlayer* tiene como valor 1 o 2. Se omite el else if, si witchPlayer no es 1, entonces es 2.
 
+### Bishop.java
+
+- Se cambió el uso de if, else if, por switch case ya que muestra un poco más de rendimiento, también se eliminó el uso de múltiples return para facilitar el mantenimiento de la función.

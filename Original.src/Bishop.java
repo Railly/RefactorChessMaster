@@ -54,21 +54,22 @@ public class Bishop extends ChessGamePiece{
      */
     @Override
     public ImageIcon createImageByPieceType(){
+
+        String resource = "";
+
+        switch(getColorOfPiece()) {
+            case ChessGamePiece.WHITE:
+                resource = "chessImages/WhiteBishop.gif";
+                break;
+            case ChessGamePiece.BLACK:
+                resource = "chessImages/BlackBishop.gif";
+                break;
+            default:
+                resource = "chessImages/BlackBishop.gif";
+        }
         
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/WhiteBishop.gif")
-            );            
-        }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/BlackBishop.gif")
-            );
-        }
-        else{
-            return new ImageIcon(
-                getClass().getResource("chessImages/BlackBishop.gif")
-            );
-        }
+        return new ImageIcon(
+            getClass().getResource( resource )
+        );
     }
 }
