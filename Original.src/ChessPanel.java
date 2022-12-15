@@ -74,13 +74,8 @@ public class ChessPanel extends JPanel{
     public ChessGraveyard getGraveyard( int whichPlayer ){
         if ( whichPlayer == 1 ){
             return playerOneGraveyard;
-        }
-        else if ( whichPlayer == 2 ){
+        }else{
             return playerTwoGraveyard;
-        }
-        else
-        {
-            return null;
         }
     }
 }
