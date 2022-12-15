@@ -11,8 +11,8 @@ import java.util.Date;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class ChessGameLog
-    extends JScrollPane{
+public class ChessGameLog extends JScrollPane{
+    
     private JTextArea textArea;
     // ----------------------------------------------------------
     /**

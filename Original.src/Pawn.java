@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class Pawn
-    extends ChessGamePiece{
+public class Pawn extends ChessGamePiece{
+
     private boolean notMoved;
     // ----------------------------------------------------------
     /**
@@ -28,6 +28,7 @@ public class Pawn
      *            either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
     public Pawn( ChessGameBoard board, int row, int col, int color ){
+
         super( board, row, col, color, true );
         notMoved = true;
         possibleMoves = calculatePossibleMoves( board );
@@ -45,6 +46,7 @@ public class Pawn
      */
     @Override
     public boolean move( ChessGameBoard board, int row, int col ){
+        
         if ( super.move( board, row, col ) ){
             notMoved = false;
             possibleMoves = calculatePossibleMoves( board );

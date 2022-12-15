@@ -10,13 +10,13 @@ import javax.swing.*;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class ChessMenuBar
-    extends JMenuBar{
+public class ChessMenuBar extends JMenuBar{
     // ----------------------------------------------------------
     /**
      * Create a new ChessMenuBar object.
      */
     public ChessMenuBar(){
+
         String[] menuCategories = { "File", "Options", "Help" };
         String[] menuItemLists =
         { "New game/restart,Exit", "Toggle graveyard,Toggle game log",
@@ -51,6 +51,7 @@ public class ChessMenuBar
          */
         @Override
         public void actionPerformed( ActionEvent event ){
+            
             String buttonName = ( (JMenuItem)event.getSource() ).getText();
             if ( buttonName.equals( "About" ) ){
                 aboutHandler();

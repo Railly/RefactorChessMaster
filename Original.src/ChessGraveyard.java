@@ -9,8 +9,8 @@ import javax.swing.*;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class ChessGraveyard
-    extends JPanel{
+public class ChessGraveyard extends JPanel{
+    
     private String title;
     // ----------------------------------------------------------
     /**

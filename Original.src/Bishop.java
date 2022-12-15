@@ -35,6 +35,7 @@ public class Bishop extends ChessGamePiece{
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
+
         ArrayList<String> northEastMoves = calculateNorthEastMoves( board, 8 );
         ArrayList<String> northWestMoves = calculateNorthWestMoves( board, 8 );
         ArrayList<String> southEastMoves = calculateSouthEastMoves( board, 8 );
@@ -53,6 +54,7 @@ public class Bishop extends ChessGamePiece{
      */
     @Override
     public ImageIcon createImageByPieceType(){
+        
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteBishop.gif")

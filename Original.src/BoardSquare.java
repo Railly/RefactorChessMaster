@@ -9,8 +9,8 @@ import javax.swing.JPanel;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class BoardSquare
-    extends JPanel{
+public class BoardSquare extends JPanel{
+
     private int            row;
     private int            col;
     private ChessGamePiece piece;
@@ -26,6 +26,7 @@ public class BoardSquare
      * @param piece
      *            the game piece
      */
+    
     public BoardSquare( int row, int col, ChessGamePiece piece ){
         super();
         this.row = row;

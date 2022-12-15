@@ -15,6 +15,7 @@ import java.awt.GridLayout;
  * @version 2010.11.17
  */
 public class ChessGameBoard extends JPanel{
+    
     private BoardSquare[][] chessCells;
     private BoardListener   listener;
     // ----------------------------------------------------------

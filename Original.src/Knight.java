@@ -9,8 +9,7 @@ import java.util.ArrayList;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class Knight
-    extends ChessGamePiece{
+public class Knight extends ChessGamePiece{
     /**
      * Knight constructor for gamePiece
      *
@@ -35,6 +34,7 @@ public class Knight
      * @return ArrayList<String> a list of the possible moves
      */
     private ArrayList<String> calculateNorthMoves( ChessGameBoard board ){
+
         ArrayList<String> moves = new ArrayList<String>();
         for ( int i = 2; i >= -2; i -= 4 ){
             for ( int j = 1; j >= -1; j -= 2 ){
@@ -83,6 +83,7 @@ public class Knight
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
+
         ArrayList<String> moves = new ArrayList<String>();
         if ( isPieceOnScreen() ){
             moves.addAll( calculateNorthMoves( board ) );
@@ -97,6 +98,7 @@ public class Knight
      */
     @Override
     public ImageIcon createImageByPieceType(){
+        
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
                 getClass().getResource("chessImages/WhiteKnight.gif")

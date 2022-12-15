@@ -9,8 +9,7 @@ import javax.swing.*;
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class ChessPanel
-    extends JPanel{
+public class ChessPanel extends JPanel{
     private ChessMenuBar    menuBar;
     private ChessGameBoard  gameBoard;
     private ChessGameLog    gameLog;
@@ -22,6 +21,7 @@ public class ChessPanel
      * Create a new ChessPanel object.
      */
     public ChessPanel(){
+        
         this.setLayout( new BorderLayout() );
         menuBar = new ChessMenuBar();
         gameBoard = new ChessGameBoard();

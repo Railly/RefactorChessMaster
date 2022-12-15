@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
  * @version 2010.11.17
  */
 public class ChessGameEngine{
+
     private ChessGamePiece currentPiece;
     private boolean        firstClick;
     private int            currentPlayer;
@@ -28,6 +29,7 @@ public class ChessGameEngine{
      *            the reference ChessGameBoard
      */
     public ChessGameEngine( ChessGameBoard board ){
+
         firstClick = true;
         currentPlayer = 1;
         this.board = board;
@@ -245,6 +247,7 @@ public class ChessGameEngine{
         BoardSquare squareClicked = (BoardSquare)e.getSource();
         ChessGamePiece pieceOnSquare = squareClicked.getPieceOnSquare();
         board.clearColorsOnBoard();
+        
         if ( firstClick ){
             currentPiece = squareClicked.getPieceOnSquare();
             if ( selectedPieceIsValid() ){
