@@ -98,22 +98,22 @@ public class Knight extends ChessGamePiece{
      */
     @Override
     public ImageIcon createImageByPieceType(){
+
+        String resource = "";
+
+        switch(getColorOfPiece()) {
+            case ChessGamePiece.WHITE:
+                resource = "chessImages/WhiteKnight.gif";
+                break;
+            case ChessGamePiece.BLACK:
+                resource = "chessImages/BlackKnight.gif";
+                break;
+            default:
+                resource = "chessImages/default-Unassigned.gif";
+        }
         
-        if ( getColorOfPiece() == ChessGamePiece.WHITE ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/WhiteKnight.gif")
-            );            
-        }
-        else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
-            return new ImageIcon(
-                getClass().getResource("chessImages/BlackKnight.gif")
-            );            
-        }
-        else
-        {
-            return new ImageIcon(
-                getClass().getResource("chessImages/default-Unassigned.gif")
-            );            
-        }
+        return new ImageIcon(
+            getClass().getResource(resource )
+        );
     }
 }

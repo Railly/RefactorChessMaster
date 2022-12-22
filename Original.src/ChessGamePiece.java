@@ -468,22 +468,19 @@ public abstract class ChessGamePiece{
      * @return boolean true if the move was successful, false otherwise
      */
     public boolean move( ChessGameBoard board, int row, int col ){
+
+        int wichPlayerNumber;
+
         if ( canMove( board, row, col ) ){
             String moveLog = this.toString() + " -> ";
             board.clearCell( pieceRow, pieceColumn );
             if ( isEnemy( board, row, col ) ){
                 ChessGraveyard graveyard;
-                ChessGameEngine gameEngine =
-                    ( (ChessPanel)board.getParent() ).getGameEngine();
-                if ( gameEngine.getCurrentPlayer() == 1 ){
-                    graveyard =
-                        ( (ChessPanel)board.getParent() ).getGraveyard( 2 );
-                }
-                else
-                {
-                    graveyard =
-                        ( (ChessPanel)board.getParent() ).getGraveyard( 1 );
-                }
+                ChessGameEngine gameEngine = ( (ChessPanel)board.getParent() ).getGameEngine();
+
+                wichPlayerNumber = gameEngine.getCurrentPlayer() == 1 ? 2 : 1;
+                graveyard = ( (ChessPanel)board.getParent() ).getGraveyard( wichPlayerNumber );
+                
                 graveyard.addPiece(
                     board.getCell( row, col ).getPieceOnSquare() );
             }
@@ -605,22 +602,21 @@ public abstract class ChessGamePiece{
      *            The board to show the move locations on
      */
     public void showLegalMoves( ChessGameBoard board ){
+
+        boolean colorYellow;
+
         updatePossibleMoves( board );
         if ( isPieceOnScreen() ){
             for ( String locStr : possibleMoves ){
                 String[] currCoords = locStr.split( "," );
                 int row = Integer.parseInt( currCoords[0] );
                 int col = Integer.parseInt( currCoords[1] );
+                
                 if ( canMove( board, row, col ) ) // only show legal moves
                 {
-                    if ( isEnemy( board, row, col ) ){
-                        board.getCell( row, col ).setBackground(
-                            Color.YELLOW );
-                    }
-                    else
-                    {
-                        board.getCell( row, col ).setBackground( Color.PINK );
-                    }
+                    colorYellow = isEnemy( board, row, col ) ? true : false;
+
+                    board.getCell( row, col ).setBackground( colorYellow ? Color.YELLOW : Color.PINK );
                 }
             }
         }
@@ -645,7 +641,6 @@ public abstract class ChessGamePiece{
                     return true;
                 }
             }
-            return false;
         }
         return false;
     }
@@ -680,20 +675,14 @@ public abstract class ChessGamePiece{
             if ( enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         else
         {
             if ( enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
     // ----------------------------------------------------------

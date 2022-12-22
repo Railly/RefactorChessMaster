@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 // -------------------------------------------------------------------------
@@ -69,7 +71,7 @@ public class Bishop extends ChessGamePiece{
         }
         
         return new ImageIcon(
-            getClass().getResource( resource )
+            getClass().getResource(resource )
         );
     }
 }
