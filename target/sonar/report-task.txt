@@ -1,7 +1,6 @@
-organization=francism16
-projectKey=ChessMaster:test
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.31186
-dashboardUrl=https://sonarcloud.io/dashboard?id=ChessMaster%3Atest
-ceTaskId=AYKyt3eh3nHwyqvMTwny
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYKyt3eh3nHwyqvMTwny
+projectKey=ChessMaster:sprint3.1
+serverUrl=http://localhost:9000
+serverVersion=9.0.0.45539
+dashboardUrl=http://localhost:9000/dashboard?id=ChessMaster%3Asprint3.1
+ceTaskId=AYU8O75B8WrfoDWxS6kU
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYU8O75B8WrfoDWxS6kU

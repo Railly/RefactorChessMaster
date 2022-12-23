@@ -1,40 +1,44 @@
-import javax.swing.ImageIcon;
-import java.util.ArrayList;
+package ui.pieces;
 
-// import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+
+import ui.ChessGamePiece;
+import ui.board.ChessGameBoard;
+
 // -------------------------------------------------------------------------
 /**
- * Represents a Queen game piece.
- *
+ * Class to represent the Bishop piece.
+ * 
  * @author Ben Katz (bakatz)
  * @author Myles David II (davidmm2)
  * @author Danielle Bushrow (dbushrow)
  * @version 2010.11.17
  */
-public class Queen
-        extends ChessGamePiece {
-    // ----------------------------------------------------------
+public class Bishop extends ChessGamePiece {
     /**
-     * Create a new Queen object.
-     *
+     * Creates a new Bishop object.
+     * 
      * @param board
-     *              the board the queen is on
+     *              board the board to create the bishop on
      * @param row
-     *              the row location of the queen
+     *              row location of the Bishop
      * @param col
-     *              the column location of the queen
+     *              col location of the Bishop
      * @param color
      *              either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Queen(ChessGameBoard board, int row, int col, int color) {
+    public Bishop(ChessGameBoard board, int row, int col, int color) {
         super(board, row, col, color);
     }
 
     /**
-     * Calculates the possible moves for this Queen.
+     * Calculates the possible moves for this piece. These are ALL the possible
+     * moves, including illegal (but at the same time valid) moves.
      * 
-     * @param board the board to check on
-     * @return ArrayList<String> the list of moves
+     * @param board
+     *              the game board to calculate moves on
+     * @return ArrayList<String> the moves
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves(ChessGameBoard board) {
@@ -42,38 +46,30 @@ public class Queen
         ArrayList<String> northWestMoves = calculateNorthWestMoves(board, 8);
         ArrayList<String> southEastMoves = calculateSouthEastMoves(board, 8);
         ArrayList<String> southWestMoves = calculateSouthWestMoves(board, 8);
-        ArrayList<String> northMoves = calculateNorthMoves(board, 8);
-        ArrayList<String> southMoves = calculateSouthMoves(board, 8);
-        ArrayList<String> eastMoves = calculateEastMoves(board, 8);
-        ArrayList<String> westMoves = calculateWestMoves(board, 8);
-        ArrayList<String> allMoves = new ArrayList<String>();
+        ArrayList<String> allMoves = new ArrayList<>();
         allMoves.addAll(northEastMoves);
         allMoves.addAll(northWestMoves);
-        allMoves.addAll(southWestMoves);
         allMoves.addAll(southEastMoves);
-        allMoves.addAll(northMoves);
-        allMoves.addAll(southMoves);
-        allMoves.addAll(westMoves);
-        allMoves.addAll(eastMoves);
+        allMoves.addAll(southWestMoves);
         return allMoves;
     }
 
     /**
      * Creates an icon for this piece depending on the piece's color.
-     *
+     * 
      * @return ImageIcon the ImageIcon representation of this piece.
      */
     @Override
     public ImageIcon createImageByPieceType() {
         if (getColorOfPiece() == ChessGamePiece.WHITE) {
             return new ImageIcon(
-                    getClass().getResource("../chessImages/WhiteQueen.gif"));
+                    getClass().getResource("chessImages/WhiteBishop.gif"));
         } else if (getColorOfPiece() == ChessGamePiece.BLACK) {
             return new ImageIcon(
-                    getClass().getResource("../chessImages/BlackQueen.gif"));
+                    getClass().getResource("chessImages/BlackBishop.gif"));
         } else {
             return new ImageIcon(
-                    getClass().getResource("../chessImages/default-Unassigned.gif"));
+                    getClass().getResource("chessImages/BlackBishop.gif"));
         }
     }
 }

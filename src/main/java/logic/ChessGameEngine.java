@@ -1,14 +1,14 @@
 package logic;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-import UI.ChessGamePiece;
-import UI.ChessPanel;
-import UI.board.BoardSquare;
-import UI.board.ChessGameBoard;
-import UI.pieces.King;
+import ui.ChessGamePiece;
+import ui.ChessPanel;
+import ui.board.BoardSquare;
+import ui.board.ChessGameBoard;
+import ui.pieces.King;
 
 import java.awt.event.MouseEvent;
 
@@ -98,7 +98,7 @@ public class ChessGameEngine {
      * @return boolean true if the player does have legal moves, false otherwise
      */
     public boolean playerHasLegalMoves(int playerNum) {
-        ArrayList<ChessGamePiece> pieces;
+        List<ChessGamePiece> pieces;
         if (playerNum == 1) {
             pieces = board.getAllWhitePieces();
         } else if (playerNum == 2) {
@@ -127,10 +127,8 @@ public class ChessGameEngine {
         }
         if (currentPlayer == 2) // black player
         {
-            if (currentPiece.getColorOfPiece() == ChessGamePiece.BLACK) {
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.BLACK;
+
         } else
         // white player
         {
@@ -179,7 +177,6 @@ public class ChessGameEngine {
             reset();
         } else {
             board.resetBoard(false);
-            // System.exit(0);
         }
     }
 
