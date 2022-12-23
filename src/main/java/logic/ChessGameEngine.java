@@ -1,6 +1,6 @@
 package logic;
 
-import java.util.List;
+import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -98,7 +98,7 @@ public class ChessGameEngine {
      * @return boolean true if the player does have legal moves, false otherwise
      */
     public boolean playerHasLegalMoves(int playerNum) {
-        List<ChessGamePiece> pieces;
+        ArrayList<ChessGamePiece> pieces;
         if (playerNum == 1) {
             pieces = board.getAllWhitePieces();
         } else if (playerNum == 2) {
@@ -127,8 +127,10 @@ public class ChessGameEngine {
         }
         if (currentPlayer == 2) // black player
         {
-            return currentPiece.getColorOfPiece() == ChessGamePiece.BLACK;
-
+            if (currentPiece.getColorOfPiece() == ChessGamePiece.BLACK) {
+                return true;
+            }
+            return false;
         } else
         // white player
         {

@@ -1,7 +1,6 @@
 package ui.board;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.Color;
@@ -93,8 +92,8 @@ public class ChessGameBoard extends JPanel {
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public List<ChessGamePiece> getAllWhitePieces() {
-        List<ChessGamePiece> whitePieces = new ArrayList<>();
+    public ArrayList<ChessGamePiece> getAllWhitePieces() {
+        ArrayList<ChessGamePiece> whitePieces = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (chessCells[i][j].getPieceOnSquare() != null
@@ -112,8 +111,8 @@ public class ChessGameBoard extends JPanel {
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public List<ChessGamePiece> getAllBlackPieces() {
-        List<ChessGamePiece> blackPieces = new ArrayList<>();
+    public ArrayList<ChessGamePiece> getAllBlackPieces() {
+        ArrayList<ChessGamePiece> blackPieces = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (chessCells[i][j].getPieceOnSquare() != null
