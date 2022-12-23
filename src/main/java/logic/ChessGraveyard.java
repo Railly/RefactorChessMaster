@@ -3,7 +3,7 @@ package logic;
 import java.awt.GridLayout;
 import javax.swing.*;
 
-import ui.ChessGamePiece;
+import UI.ChessGamePiece;
 
 // -------------------------------------------------------------------------
 /**

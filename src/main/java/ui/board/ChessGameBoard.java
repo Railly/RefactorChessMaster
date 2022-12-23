@@ -1,4 +1,4 @@
-package ui.board;
+package UI.board;
 
 import java.util.ArrayList;
 import java.awt.event.MouseEvent;
@@ -6,14 +6,14 @@ import java.awt.event.MouseListener;
 import java.awt.Color;
 import javax.swing.JPanel;
 
-import ui.ChessGamePiece;
-import ui.ChessPanel;
-import ui.pieces.Bishop;
-import ui.pieces.King;
-import ui.pieces.Knight;
-import ui.pieces.Pawn;
-import ui.pieces.Queen;
-import ui.pieces.Rook;
+import UI.ChessGamePiece;
+import UI.ChessPanel;
+import UI.pieces.Bishop;
+import UI.pieces.King;
+import UI.pieces.Knight;
+import UI.pieces.Pawn;
+import UI.pieces.Queen;
+import UI.pieces.Rook;
 
 import java.awt.GridLayout;
 

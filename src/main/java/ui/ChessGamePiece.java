@@ -1,12 +1,12 @@
-package ui;
+package UI;
 
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
+import UI.board.ChessGameBoard;
 import logic.ChessGameEngine;
 import logic.ChessGraveyard;
-import ui.board.ChessGameBoard;
 
 // -------------------------------------------------------------------------
 /**

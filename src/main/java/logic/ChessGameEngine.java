@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-import ui.ChessGamePiece;
-import ui.ChessPanel;
-import ui.board.BoardSquare;
-import ui.board.ChessGameBoard;
-import ui.pieces.King;
+import UI.ChessGamePiece;
+import UI.ChessPanel;
+import UI.board.BoardSquare;
+import UI.board.ChessGameBoard;
+import UI.pieces.King;
 
 import java.awt.event.MouseEvent;
 

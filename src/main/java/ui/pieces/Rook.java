@@ -1,9 +1,9 @@
-package ui.pieces;
+package UI.pieces;
 
 import javax.swing.ImageIcon;
 
-import ui.ChessGamePiece;
-import ui.board.ChessGameBoard;
+import UI.ChessGamePiece;
+import UI.board.ChessGameBoard;
 
 import java.util.ArrayList;
 
