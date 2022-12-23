@@ -1,12 +1,14 @@
-package UI;
+package ui;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.ImageIcon;
 
-import UI.board.ChessGameBoard;
 import logic.ChessGameEngine;
 import logic.ChessGraveyard;
+import ui.board.ChessGameBoard;
 
 // -------------------------------------------------------------------------
 /**
@@ -250,7 +252,7 @@ public abstract class ChessGamePiece {
                         break;
                     }
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -282,7 +284,6 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow - i, pieceColumn - i)) {
                     moves.add((pieceRow - i) + "," + (pieceColumn - i));
-                    count++;
                     break;
                 } else {
                     return moves;
@@ -317,10 +318,9 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow - i, pieceColumn + i)) {
                     moves.add((pieceRow - i) + "," + (pieceColumn + i));
-                    count++;
                     break;
                 } else {
-                    break;
+                    return moves;
                 }
             }
         }
@@ -352,7 +352,6 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow + i, pieceColumn - i)) {
                     moves.add((pieceRow + i) + "," + (pieceColumn - i));
-                    count++;
                     break;
                 } else {
                     return moves;
@@ -387,7 +386,6 @@ public abstract class ChessGamePiece {
                     count++;
                 } else if (isEnemy(board, pieceRow + i, pieceColumn + i)) {
                     moves.add((pieceRow + i) + "," + (pieceColumn + i));
-                    count++;
                     break;
                 } else {
                     return moves;
@@ -669,7 +667,6 @@ public abstract class ChessGamePiece {
         }
         if (this.getColorOfPiece() == ChessGamePiece.WHITE) {
             return enemyPiece.getColorOfPiece() == ChessGamePiece.BLACK;
-
         } else {
             return enemyPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
@@ -682,8 +679,8 @@ public abstract class ChessGamePiece {
      * @param board the game board to check on
      * @return ArrayList<GamePiece> the list of attackers
      */
-    public ArrayList<ChessGamePiece> getCurrentAttackers(ChessGameBoard board) {
-        ArrayList<ChessGamePiece> attackers = new ArrayList<>();
+    public List<ChessGamePiece> getCurrentAttackers(ChessGameBoard board) {
+        List<ChessGamePiece> attackers = new ArrayList<>();
         int enemyColor = (this.getColorOfPiece() == ChessGamePiece.BLACK)
                 ? ChessGamePiece.WHITE
                 : ChessGamePiece.BLACK;

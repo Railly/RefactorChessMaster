@@ -1,19 +1,20 @@
-package UI.board;
+package ui.board;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.Color;
 import javax.swing.JPanel;
 
-import UI.ChessGamePiece;
-import UI.ChessPanel;
-import UI.pieces.Bishop;
-import UI.pieces.King;
-import UI.pieces.Knight;
-import UI.pieces.Pawn;
-import UI.pieces.Queen;
-import UI.pieces.Rook;
+import ui.ChessGamePiece;
+import ui.ChessPanel;
+import ui.pieces.Bishop;
+import ui.pieces.King;
+import ui.pieces.Knight;
+import ui.pieces.Pawn;
+import ui.pieces.Queen;
+import ui.pieces.Rook;
 
 import java.awt.GridLayout;
 
@@ -92,8 +93,8 @@ public class ChessGameBoard extends JPanel {
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public ArrayList<ChessGamePiece> getAllWhitePieces() {
-        ArrayList<ChessGamePiece> whitePieces = new ArrayList<>();
+    public List<ChessGamePiece> getAllWhitePieces() {
+        List<ChessGamePiece> whitePieces = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (chessCells[i][j].getPieceOnSquare() != null
@@ -111,8 +112,8 @@ public class ChessGameBoard extends JPanel {
      *
      * @return ArrayList<GamePiece> the pieces
      */
-    public ArrayList<ChessGamePiece> getAllBlackPieces() {
-        ArrayList<ChessGamePiece> blackPieces = new ArrayList<>();
+    public List<ChessGamePiece> getAllBlackPieces() {
+        List<ChessGamePiece> blackPieces = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (chessCells[i][j].getPieceOnSquare() != null

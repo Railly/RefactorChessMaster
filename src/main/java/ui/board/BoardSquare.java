@@ -1,9 +1,9 @@
-package ui.board;
+package UI.board;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import ui.ChessGamePiece;
+import UI.ChessGamePiece;
 
 // -------------------------------------------------------------------------
 /**
